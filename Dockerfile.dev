@@ -10,7 +10,7 @@ WORKDIR /usr/app
 
 COPY ./package.json ./
 
-RUN npm config set registry http://registry.npmjs.org/ --global
+##RUN npm config set registry http://registry.npmjs.org/ --global
 ## Install some dependencies
 RUN npm install
 
