@@ -5,8 +5,8 @@ FROM node:alpine
 WORKDIR /usr/app
 ##COPY FILES
 
-ENV HTTP_PROXY "http://genproxy:8080"
-ENV HTTPS_PROXY "http://genproxy:8080"
+#ENV HTTP_PROXY "http://genproxy:8080"
+#ENV HTTPS_PROXY "http://genproxy:8080"
 
 COPY ./package.json ./
 
