@@ -6,4 +6,4 @@ before_install:
   - docker build -t geekhitesh/react-frontend -f Dockerfile.dev .
 
 script:
-  - docker run geekhitesh/react-frontend npm run test -- --coverage
+  - docker run -e CI=true geekhitesh/react-frontend  npm run test
