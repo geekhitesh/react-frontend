@@ -1,0 +1,21 @@
+##Base image
+
+FROM node:alpine
+
+WORKDIR /usr/app
+##COPY FILES
+
+ENV HTTP_PROXY "http://genproxy:8080"
+ENV HTTPS_PROXY "http://genproxy:8080"
+
+COPY ./package.json ./
+
+RUN npm config set registry http://registry.npmjs.org/ --global
+## Install some dependencies
+RUN npm install
+
+COPY ./ ./
+
+##  Default Command
+
+CMD ["npm","run","start"]
