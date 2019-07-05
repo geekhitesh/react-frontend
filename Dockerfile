@@ -1,8 +1,8 @@
 FROM node:alpine as builder
 WORKDIR '/app'
 
-ENV HTTP_PROXY "http://genproxy:8080"
-ENV HTTPS_PROXY "http://genproxy:8080"
+#ENV HTTP_PROXY "http://genproxy:8080"
+#ENV HTTPS_PROXY "http://genproxy:8080"
 
 # RUN npm config set registry http://registry.npmjs.org/ --global
 COPY package.json .
